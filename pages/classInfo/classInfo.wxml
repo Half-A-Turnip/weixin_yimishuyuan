@@ -1,0 +1,93 @@
+<import src="../classSpan/classSpan.wxml"/>
+<view class="flexcontainer">
+    <view class="img">
+        <image src="{{Body.img}}" class="image" mode="widthFix" id="img"></image>
+        <text class="title">{{Body.zt}}</text>
+        <view class="info">
+            <text class="text">{{Body.class_number}}章节</text>
+        </view>
+    </view>
+    <view class="showMain">
+        <view class="showSpanBox {{hasFixed?'hasFixed':''}}" id="showSpanBox" data-has="{{hasFixed}}">
+            <view class="showSpan {{index === showSpanS.activeIndex?'active':''}}" 
+                wx:for="{{showSpanS.spans}}" 
+                wx:for-index="index" 
+                wx:key="index" 
+                wx:for-item="item"
+                data-index="{{index}}"
+                bindtap="checkSpan">
+                    {{item}}
+                </view>
+        </view>
+        <view class="showMainBoxs {{hasFixed?'top50':''}}">
+            <view class="showMainBox {{0 === showSpanS.activeIndex?'active':''}}">
+                <view class="showMainInfo">
+                    <view class="myclassInfo">
+                        <view class="text">{{Body.title}}</view>
+                        <view class="infoBox">
+                            <text class="price">￥{{Body.xuefei}}</text>
+                            <text class="icon-span hot">{{Body.zt}}</text>
+                        </view>
+                        <view class="infoSpan">
+                            <text class="span">售量582</text>
+                            <text class="span">收藏456</text>
+                            <text class="span">其他499</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="showInfoMore">
+                    <view class="showInfoMoreBox">
+                        <view class="showInfoMoreBoxTitle">
+                            <text class="icon icon-time"></text> {{Body.time1}}至{{Body.time2}}({{Body.period}}{{Body.classtime}})
+                        </view>
+                    </view>
+                    <view class="showInfoMoreBox">
+                        <view class="showInfoMoreBoxTitle">
+                            <text class="icon icon-address"></text> {{Body.class_dz}}
+                        </view>
+                    </view>
+                </view>
+                <view class="showMainAttr">
+                    <view class="title">{{Body.comment}}</view>
+                    <!-- <a class="btn" data-id="{{Body.classxklevel_id}}">立即购买</a> -->
+                </view>
+            </view>
+            <view class="showMainBox {{1 === showSpanS.activeIndex?'active':''}}">
+                <view class="showMainInfo">
+                    <view class="a">
+                        <image class="img" src="{{Body.teacherimg}}" alt=""></image>
+                        <text class="b">{{Body.teacher}}</text>
+                        <view class="spans">
+                            <text class="tagbcolor1 span">{{Body.xklevel}}</text>
+                            <text class="tagbcolor2 span">{{Body.xiangmu}}</text>
+                        </view>
+                    </view>
+                    <view class="p">
+                        {{Body.jianjie}}
+                    </view>
+                </view>
+                <view class="xiangguan">相关推荐</view>
+                <template is="classSpan" data="{{getData}}"/>
+            </view>
+            <view class="showMainBox {{2 === showSpanS.activeIndex?'active':''}}">
+            <view class="showMainBoxMenu">
+                    <view class="text">
+                        <span class="time">两课时学习</span>
+                        <span class="info">更全面的职业课程大纲</span>
+                    </view>
+                    <view class="ul">
+                        <view class="li"  
+                            wx:for="{{mulu}}" 
+                            wx:for-index="index" 
+                            wx:key="index" 
+                            wx:for-item="item" >
+                            <view class="p">
+                                {{index+1}} {{item.title}} <span class="span">{{item.Ks}} 课时</span>
+                            </view>
+                        </view>
+                    </view>
+                </view> 
+            </view>
+        </view>
+    </view>
+</view>

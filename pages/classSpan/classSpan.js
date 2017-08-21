@@ -1,0 +1,3 @@
+// classSpan.js
+Page({
+})

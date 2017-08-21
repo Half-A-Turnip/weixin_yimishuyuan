@@ -1,0 +1,32 @@
+<template name="classSpan">
+    <view class="show-box">
+        <view class="show-box-li" 
+                        wx:for="{{getData}}" 
+                        wx:for-index="index" 
+                        wx:key="index" 
+                        wx:for-item="item" >
+            <navigator url="../classInfo/classInfo?id={{item.DT_RowId||item.id}}" class="flex f-main-justify">
+                <view class="img">
+                    <image src="{{item.img}}" alt=""></image>
+                </view>
+                <view class="info flex-item">
+                    <view class="title">
+                        <p>{{item.title}}</p>
+                    </view>
+                    <view class="price">
+                        <view class="num">￥
+                            <i>{{item.xuefei}}</i>
+                        </view>
+                        <text class="time">开课{{item.time1}}</text>
+                    </view>
+                    <view class="spans f-box f-main-justify">
+                        <view class="tag">
+                            <text class="span label-primary">{{item.type}}</text>
+                        </view>
+                        <view class="shuyuan">{{item.class_dz}}</view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</template>

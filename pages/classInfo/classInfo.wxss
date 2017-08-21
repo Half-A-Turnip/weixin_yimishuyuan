@@ -1,0 +1,323 @@
+@import "../classSpan/classSpan.wxss";
+/* classInfo.wxss */
+  .img {
+      position: relative;
+      /* width:100%;
+      flex:0 0 100%; */
+  }
+  
+  .img .image {
+      width: 100%;
+      vertical-align: bottom;
+  }
+  .hasFixed{
+    position:fixed;
+    top:0;
+    right:0;
+    background:#fff;
+    z-index:99;
+  }
+  .top50{
+      margin-top:50px;
+  }
+  .img .title {
+      width: 50px;
+      height: 20px;
+      line-height: 20px;
+      font-size:12px;
+      top:5px;
+      right: 5px;
+      text-align: center;
+      display: inline-block;
+      border: 2px solid transparent;
+      border-radius: 2px;
+      position: absolute;
+      color: #ff725f;
+      border-color: #ff725f;
+      background: rgba(80, 80, 80, 0.5);
+  }
+  
+  .img .info {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      box-sizing: border-box;
+      color: #fff;
+      padding: 5px;
+  }
+  .img .info .text {
+      background-repeat: no-repeat;
+      display: inline-block;
+      font-size: 10px;
+  }
+  /*showMain*/
+  .showMain{
+       flex:0 1 auto;
+  }
+  .showSpanBox{
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid #eaecec;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box;
+  }
+  .showSpan {
+    flex: 1;
+    height:48px;
+    line-height:48px;
+  }
+  .showSpan.active{
+    color: #5ecfba;
+    border-bottom: 2px solid;
+  }
+  /*课程简介*/
+  .showMainInfo {
+    padding: 5px 4%;
+    overflow: hidden;
+    width: 92%;
+    background: #fff;
+}
+  .myclassInfo {
+      font-size: 0.5rem;
+      color: #888;
+  }
+  
+  .myclassInfo .text {
+      display: inline-block;
+      font-size: 16px;
+      color: #333;
+      line-height: 30px;
+      font-weight: normal;
+  }
+  
+
+  
+  .myclassInfo .infoBox .price {
+      color: #ff6900;
+      line-height: 30px;
+      font-size: 18px;
+      margin-right: 5px;
+  }
+  
+  .myclassInfo .infoBox .icon-span {
+      padding: 1px;
+      font-size: 8px;
+      margin-right: 2px;
+      position: relative;
+      top: -5px;
+  }
+  
+  .myclassInfo .infoBox .icon-span.hot {
+      border: 1px solid #339efe;
+      color: #339efe;
+  }
+  
+  .myclassInfo .infoSpan {
+      display: -webkit-box;
+      display: flex;
+      display: -ms-flex;
+      display: -webkit-flex;
+      width: 100%;
+  }
+  
+  .myclassInfo .infoSpan .span {
+      height: 30px;
+      line-height: 30px;
+      flex: 1;
+      -ms-flex: 1;
+      -webkit-flex: 1;
+      -webkit-box-flex: 1;
+      position: relative;
+      font-size: 12px;
+      color: #999;
+  }
+  
+  .myclassInfo .infoSpan .span:nth-child(2) {
+      text-align: center;
+  }
+  
+  .myclassInfo .infoSpan .span:last-child {
+      text-align: right;
+  }
+  
+  .showInfoMore {
+      width: 94%;
+      background: #f8fffb;
+      display: -webkit-box;
+      padding: 8px 3%;
+      -webkit-box-orient: block-axis;
+      -moz-box-orient: block-axis;
+      border-top: 1px solid #f5efef;
+  }
+  
+  .showInfoMoreBox {
+      color: #0ead51;
+      line-height: 15px;
+      font-size: 13px;
+  }
+  
+  .showInfoMoreBox:first-child {
+      margin-bottom: 5px;
+  }
+  .showInfoMoreBoxTitle{
+      height: 18px;
+  }
+  .showMainAttr {
+      width: 94%;
+      background: #f8fffb;
+      display: -webkit-box;
+      padding: 12px 3%;
+      -webkit-box-orient: block-axis;
+      -moz-box-orient: block-axis;
+      margin-top: 10px;
+      padding-bottom: 58px;
+      background: #fff
+  }
+  
+  .showMainAttr .title {
+      margin-top: 10px;
+      line-height: 20px;
+      font-size: 14px;
+      color: #666;
+  }
+  
+  .showMainAttr .btn {
+      display: block;
+      margin: 15px auto;
+      width: 90px;
+      height: 28px;
+      border-radius: 3px;
+      border: 1px solid #FF6900;
+      line-height: 30px;
+      color: #ff6900;
+      font-size: 12px;
+      text-align: center;
+  }
+  
+  .showMainBox:first-child {
+      background: #eee;
+  }
+  .showMainBox{
+      display: none;
+  }
+  .showMainBox.active{
+      display: block;
+  }
+  /*课程目录*/
+  .showMainBox .showMainBoxMenu .text {
+      padding: 0 10px;
+      font-weight: normal;
+      background: #fff9c9;
+      height: 36px;
+      line-height: 36px;
+      font-size: 14px;
+  }
+  
+  .showMainBoxMenu .text .time {
+      background-repeat: no-repeat;
+      color: #666;
+      margin-right: 0.7rem;
+      background-position: -430px -360px;
+      padding-left: 12px;
+  }
+  
+  .showMainBoxMenu .text .info {
+      color: #666;
+      font-size: 12px;
+  }
+  
+  .showMainBoxMenu .ul {
+      overflow: hidden;
+      padding: 5px 10px;
+  }
+  
+  .showMainBoxMenu .ul .li {
+      border-bottom: 2px solid #eee;
+      padding: 0 5px;
+      display: block;
+  }
+  
+  .showMainBoxMenu .ul .li .p {
+      padding: 5px 0;
+      color: #666;
+      font-size: 12px;
+      display: table;
+      width: 100%;
+      height: 1px;
+  }
+  
+  .showMainBoxMenu .ul .li .p .span {
+      float: right;
+  }
+  /*教师*/
+  .showMainInfo {
+      padding:10px 4%;
+      overflow: hidden;
+      width: 92%;
+      background: #fff;
+  }
+  
+  .showMainInfo .a .img {
+      border-radius: 50%;
+      float: left;
+      margin-right: .5rem;
+      width: 80px;
+      height: 80px;
+  }
+  
+  .showMainInfo .a {
+      display: block;
+      overflow: hidden;
+  }
+  
+  .showMainInfo .a .b {
+      font-size:14px;
+      color: #333;
+      display: block;
+      font-weight: normal;
+  }
+  .showMainInfo .p {
+    font-size:12px;
+    line-height:18px;
+    color:#666;
+    display:table;
+    height:1px;
+    margin-top:10px;
+
+  }
+  .showMainInfo .a .spans .span {
+      color: #fff;
+      border-radius: 2px;
+      padding: 2px 5px;
+     margin-right: 5px;
+  }
+  
+  .tagbcolor1 {
+      background-color: #f90
+  }
+  
+  .tagbcolor2 {
+      background-color: #2380b7
+  }
+  .xiangguan{
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+    height: 30px;
+    line-height: 30px;
+    background: #f3f3f3;
+    padding: 0 10px;
+  }
+  /*flex布局*/
+  /* .flexcontainer{
+      display: flex;
+      width: 100%;
+      flex-wrap: nowrap;
+      /* flex-direction: row; */
+  /* } */

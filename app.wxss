@@ -1,0 +1,13 @@
+/**app.wxss**/
+view{
+    font: 12px/2 "\5FAE\8F6F\96C5\9ED1"
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 

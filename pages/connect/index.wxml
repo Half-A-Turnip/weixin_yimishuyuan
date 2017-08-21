@@ -1,0 +1,18 @@
+<view class="page-body">
+    <view class="pageBox">
+         <button open-type="contact" session-from="weapp" class="btn">
+            <image src="../../images/zaixian.png" class="img"></image>
+            <text class="text">在线咨询</text>
+         </button>
+         <view class="line"></view>
+         <button class="btn" bindtap="phone">
+            <image src="../../images/phone.png" class="img"></image>
+            <text class="text">电话咨询</text>
+         </button>
+         <view class="line"></view>
+         <button class="btn" bindtap="goBaoMing">
+            <image src="../../images/baoming.png" class="img"></image>
+            <text class="text">立即报名</text>
+         </button>
+    </view>
+</view>

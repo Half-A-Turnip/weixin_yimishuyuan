@@ -1,0 +1,41 @@
+<view class="bg">
+    <view class="avatar">
+        <image src="../../images/baoming-pic.png" class="img"></image>
+    </view>
+    <view class="line">
+        <view class="line-before"></view>
+        <view class="line-content">报名</view>
+        <view class="line-after"></view>
+    </view>
+    <view class="form">
+        <form bindsubmit="formSubmit">
+            <view class="formgroup"><!--class="formgroupsmall"-->
+               <picker name="grade" bindchange="changeClass" value="{{dataSelect[classIndex].id}}" range="{{dataSelect}}" range-key="title" class="groupSpan">
+                    <view class="tetx">
+                        {{dataSelect[classIndex].title||"请选择年级"}}
+                    </view>
+                </picker>
+            </view>
+            <view class="formgroup">
+                <picker name="grade" name="subject" bindchange="changeSub" value="{{dataSelect[classIndex].child[subIndex].id}}" range="{{dataSelect[classIndex].child}}" range-key="text" class="groupSpan">
+                    <view class="tetx">
+                        {{dataSelect[classIndex].child[subIndex].text||"请选择学科"}}
+                    </view>
+                </picker>
+            </view>
+            <view class="formgroup">
+                 <input placeholder-style="color:#fff" placeholder="请输入姓名" class="groupSpan" name="name"/>
+            </view>
+            <view class="formgroup">
+                 <input placeholder-style="color:#fff" type="number" placeholder="请输入手机号" class="groupSpan" name="account" id="account" value="{{account}}" bindblur="setAccount"/>
+            </view>
+            <!-- <view class="formgroup">
+                 <input placeholder-style="color:#fff" placeholder="请输入验证码" class="groupSpan" name="code"/>
+                 <button class="btn-small" bindtap="getCode">获取验证码</button>
+            </view> -->
+            <view class="formgroup">
+                 <button class="btn" formType="submit">选课报名</button>
+            </view>
+        </form>
+    </view>
+</view>

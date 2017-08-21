@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/baoming/baoming",
+    "pages/address/address",
+    "pages/connect/index",
+    "pages/searchBox/searchBox",
+    "pages/classInfo/classInfo",
+    "pages/classSpan/classSpan"
+  ],
+  "tabBar": {
+    "borderStyle": "#fff",
+    "backgroundColor": "#fff",
+    "color": "#999",
+    "selectedColor": "#32b16c",
+    "list": [
+      {
+        "text": "选课",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/lessons.png",
+        "selectedIconPath": "images/lessonsSelected.png"
+      },
+      {
+        "text": "校区",
+        "pagePath": "pages/address/address",
+        "iconPath": "images/xiaoqu.png",
+        "selectedIconPath": "images/xiaoquSelected.png"
+      },
+      {
+        "text": "咨询",
+        "pagePath": "pages/connect/index",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/userSelected.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#32b16c",
+    "navigationBarTitleText": "依米书院",
+    "navigationBarTextStyle": "#fff"
+  }
+}

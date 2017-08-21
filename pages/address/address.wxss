@@ -1,0 +1,198 @@
+/* address.wxss */
+.address{
+    overflow: hidden;
+}
+.addressbar {
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background: #fff;
+}
+
+.addressbar::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.addressbar::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.addressbar .spans {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    line-height:40px;
+}
+.img{
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+}
+.addressbar .spans:first-child::after {
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 1px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.1);
+    top: 15%;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flex-item {
+    display: block;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    min-width: 1px;
+}
+
+.f-box {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.f-main-justify {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.show-box-li {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.show-box-li .img {
+    height: 70px;
+    width: 100px;
+    padding-right: 15px;
+}
+
+.show-box-li .img .addressImg {
+    width: 100px;
+    height: 70px;
+    background: transparent
+}
+
+.show-box-li .info .title {
+    margin-top: -1px;
+    height: 20px;
+    line-height: 18px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.show-box-li .info .infoAll {
+    margin-top: 2px;
+    height: 18px;
+    line-height: 18px;
+    color: #b9b2b2;
+    font-size: 11px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.p{
+   color:#484848;
+    font-size:14px;
+    line-height:20px;
+    font-weight:700;
+}
+.text {
+    display: flex;
+    color: #888;
+}
+
+.text .img {
+    width: 12px;
+    height: 12px;
+    padding-right: 5px;
+    position: relative;
+    top: 4px;
+}
+
+.text .text-info {
+    line-height: 20px;
+}
+.showBoxS{
+    margin-top: 50px;
+}
+
+/*下拉*/
+.addressBox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    z-index: 999;
+}
+
+.addressBoxHidden {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    position: absolute;
+}
+
+.addressBoxShowDiv {
+    overflow: hidden;
+}
+
+.addressBoxShow {
+    z-index: 99;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background: #fff;
+}
+
+.shows {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.shows .span {
+    flex: 0 0 25%;
+    flex-direction: column;
+    padding: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+}
+
+.shows .span.active {
+    /*border: 1px solid rgba(0, 0, 0, 0.1);*/
+    color: #329432;
+}

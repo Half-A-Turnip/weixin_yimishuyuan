@@ -1,0 +1,15 @@
+<import src="../classSpan/classSpan.wxml"/>
+<view class="search-container">
+    <view class="search">
+        <ul class="classSearch">
+            <li wx:for="{{ulInfo}}"  wx:for-index="index" wx:key="index" wx:for-item="item" data-type="{{item.type}}" data-typecontent="{{item.typecontent}}" data-index="{{index}}" class="classSearchLi {{index==activeIndex?'active':''}}" bindtap="choose">
+                <text>{{item.text}}</text>
+                <image src="{{item.imgSrc}}" class="loudo"></image>
+            </li>
+        </ul>
+    </view>
+    <template is="classSpan" data="{{getData}}"/>
+    <view class="loading" wx:if="{{noHas}}">
+        <text>没有更多课程了~</text>
+    </view>
+</view>

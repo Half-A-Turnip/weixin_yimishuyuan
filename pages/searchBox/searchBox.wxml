@@ -1,0 +1,51 @@
+<view class="selectMore">
+<view class="selectBox">
+    <view class="selectBoxGroup" 
+          wx:for="{{selectBoxGroup}}" 
+          wx:for-index="index" 
+          wx:key="index" 
+          wx:for-item="item">
+        <view class="selectContainer">
+            <view class="title">{{item.title}}</view>
+            <view class="selectBoxGroupSpan" wx:if="{{item.type=='time'}}">
+                <picker mode="date" value="{{time}}" start="{{item.start}}" end="{{item.end}}" bindchange="bindDateChange">
+                    <view class="span" style="width:100px" >{{dataSelect.newdata}}</view>
+                    <!-- <input data-type="time"  readonly="readonly" value="{{dataSelect.newdata}}"/> -->
+                </picker>
+            </view>
+            <view class="selectBoxGroupSpan" wx:elif="{{item.type!='price'}}">
+                <view data-type="{{item.type}}" 
+                      wx:for="{{item.selectSpan}}" 
+                      wx:for-index="spanIndex" 
+                      wx:key="spanIndex" 
+                      wx:for-item="spanItem"
+                      data-typecontent="{{spanItem.typecontent}}"
+                      data-index="{{spanIndex}}"
+                      data-parentIndex="{{index}}"
+                      class="span {{item.activeIndex==spanIndex?'active':''}}"
+                      bindtap="select"
+                        >{{spanItem.text}}</view>
+            </view>
+            <view class="selectBoxGroupSpan price" wx:else>
+                <view  data-type="{{item.type}}" 
+                       wx:for="{{item.selectSpan}}" 
+                       wx:for-index="spanIndex" 
+                       wx:key="spanIndex" 
+                       wx:for-item="spanItem"
+                       data-pricestart="{{spanItem.pricestart}}"
+                       data-priceend="{{spanItem.priceend}}"
+                       data-index="{{spanIndex}}"
+                       data-parentIndex="{{index}}"
+                       class="span {{item.activeIndex==spanIndex?'active':''}}"
+                       bindtap="select"
+                        >{{spanItem.text}}</view>
+            </view>
+        </view>
+         <view class="driver"></view>
+    </view>
+</view>
+<view class="selectBtns">
+    <view class="btn" bindtap="clear">重置</view>
+    <view class="btn sure" bindtap="sure">确定</view>
+</view>
+</view>
