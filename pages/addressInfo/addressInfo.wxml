@@ -1,0 +1,53 @@
+<view class="addressBox">
+  <swiper indicator-dots="{{indicatorDots}}"
+          indicator-color="#fff"
+          indicator-active-color="#32b16c"
+          autoplay="{{autoplay}}" 
+          interval="{{interval}}" 
+          duration="{{duration}}"
+          style="height:{{hasHeight}}px">
+    <block wx:for="{{imgs}}" wx:for-index="index" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode="aspectFill" bindload="imageLoad"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="addressInfo">
+    <view class="title">{{title}}</view>
+    <view class="info">
+      <view class="infoBox" bindtap="goMap" data-name="{{add}}" data-point="{{mark}}">
+        <view class="icon">
+          <image src="../../images/address.png" alt="" class="img"></image>
+        </view>
+        <view class="textBox">
+          <view class="text">{{add}}</view>
+        </view>
+        <view class="go">
+          <image src="../../images/arrow.png" alt="" class="imgOther"></image>
+        </view>
+      </view>
+      <view class="line"></view>
+      <view class="infoBox"  bindtap="call" data-phone="{{tel}}">
+       <view class="icon">
+        <image src="../../images/addressphone.png" alt="" class="img"></image>
+        </view>
+        <view class="textBox">
+          <view class="text">{{tel}}</view>
+        </view>
+        <view class="go">
+         <image src="../../images/arrow.png" alt="" class="imgOther"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="addressDriver"></view>
+  <view class="addressInfo">
+    <view class="title">校区介绍</view>
+    <view class="info">
+        <view class="infoMain" wx:for="{{body}}" wx:for-index="index" wx:key="index">
+          {{item}}。
+        </view>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,73 @@
+/* pages/addressInfo/addressInfo.wxss */
+.addressBox{
+
+}
+.slide-image{
+  width: 100%;
+}
+.addressInfo{
+  padding: 40rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+.addressInfo .title{
+  font-size:42rpx;
+  letter-spacing: 2rpx;
+  color: #333333;
+}
+.addressInfo .info{
+
+}
+.addressInfo .info .infoBox{
+  font-size:0;
+  padding: 20rpx 0 ;
+  display: flex;
+}
+.addressInfo .info .infoBox .icon{
+  flex:0 0 40rpx;
+  vertical-align:bottom;
+}
+.addressInfo .info .infoBox .icon .img{
+  width: 36rpx;
+  height: 36rpx;
+  position:relative;
+  top:4rpx;
+}
+.addressInfo .info .infoBox .go{
+  flex:0 0 20rpx;
+  vertical-align:bottom;
+}
+.addressInfo .info .infoBox .imgOther{
+  width: 16rpx;
+  height: 30rpx;
+}
+.addressInfo .info .infoBox .textBox{
+  flex: 1;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+.addressInfo .info .infoBox .textBox .text{
+  color: #777777;
+  font-size:36rpx;
+  letter-spacing: 2rpx;
+  word-wrap: break-word; 
+  word-break: normal;
+  width: 100%;
+  line-height: 50rpx;
+  vertical-align:top;
+}
+.line{
+  margin: 20rpx 0;
+  margin-left: 80rpx;
+  border-bottom: 1px solid #dedede;
+}
+.addressDriver{
+  background: #e5e5e5;
+  height: 20rpx;
+}
+.infoMain{
+  color: #777777;
+  letter-spacing: 2rpx;
+  font-size:32rpx;
+  text-indent: 60rpx;
+}

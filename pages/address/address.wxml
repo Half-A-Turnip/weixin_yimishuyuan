@@ -39,7 +39,7 @@
                   wx:key="index" 
                   wx:for-item="item" 
                   hidden="{{!(activeRole === 'all') && item.area !== activeRole}}">
-                <navigator href="{{item.id}}" class="flex f-main-justify">
+                <navigator url="../addressInfo/addressInfo?id={{item.id}}" class="flex f-main-justify">
                     <view class="img">
                         <image src="{{item.img}}" class="addressImg"></image>
                     </view>
