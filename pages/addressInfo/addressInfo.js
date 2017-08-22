@@ -51,10 +51,14 @@ Page({
               title: data.title,
               imgs:imgs
             });
+            wx.setNavigationBarTitle({
+              title: `校区-${data.title}`
+            })
             wx.hideLoading()
           },
           error: (err) => {
             console.log(err);
+            wx.hideLoading();
           }
         });
     },

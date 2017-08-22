@@ -1,63 +1,49 @@
 <view class="address">
-    <view class="addressbar">
-        <view class="spans" 
-              wx:for="{{showSpan}}"
-              wx:for-index="index" 
-              wx:key="index" 
-              wx:for-item="item"
-              data-index="{{index}}"
-              data-open="{{item.open}}"
-              bindtap="chooseSpan">
-              {{item.title}}
-              <image src="../../images/icon_down.png" class="img" hidden="{{item.open}}"></image>
-              <image src="../../images/icon_up.png" class="img" hidden="{{!item.open}}"></image>
-        </view>
+  <view class="addressbar">
+    <view class="spans" wx:for="{{showSpan}}" wx:for-index="index" wx:key="index" wx:for-item="item" data-index="{{index}}" data-open="{{item.open}}" bindtap="chooseSpan">
+      {{item.title}}
+      <image src="../../images/icon_down.png" class="img" hidden="{{item.open}}"></image>
+      <image src="../../images/icon_up.png" class="img" hidden="{{!item.open}}"></image>
     </view>
-    <view class="addressBox" hidden="{{!isShow}}">
-      <view class="addressBoxHidden"></view>
-      <view class="addressBoxShow">
-        <view class="addressBoxShowDiv">
-          <view class="shows">
-            <span class="span {{item.DataId==activeRole?'active':''}}" 
-                  wx:for="{{showRole[showRoleIndex]}}" 
-                  wx:for-index="index" 
-                  wx:key="index" 
-                  wx:for-item="item" 
-                  data-role="{{item.DataId}}"
-                  bindtap="chooseData">
+  </view>
+  <view class="addressBox" hidden="{{!isShow}}">
+    <view class="addressBoxHidden"></view>
+    <view class="addressBoxShow">
+      <view class="addressBoxShowDiv">
+        <view class="shows">
+          <span class="span {{item.DataId==activeRole?'active':''}}" wx:for="{{showRole[showRoleIndex]}}" wx:for-index="index" wx:key="index" wx:for-item="item" data-role="{{item.DataId}}" bindtap="chooseData">
                   {{item.DataName}}
             </span>
-          </view>
         </view>
       </view>
     </view>
-    <view class="showBoxS">
-        <view class="show-box">
-            <view class="show-box-li" 
-                  wx:for="{{showMainBox[showMainBoxIndex]}}" 
-                  wx:for-index="index" 
-                  wx:key="index" 
-                  wx:for-item="item" 
-                  hidden="{{!(activeRole === 'all') && item.area !== activeRole}}">
-                <navigator url="../addressInfo/addressInfo?id={{item.id}}" class="flex f-main-justify">
-                    <view class="img">
-                        <image src="{{item.img}}" class="addressImg"></image>
-                    </view>
-                    <view class="info flex-item">
-                        <view class="title">
-                            <view class="p">{{item.title}}</view>
-                        </view>
-                        <view class="text">
-                            <image src="../../images/address.png" alt="" class="img"></image>
-                            <view class="text-info">{{item.add}}</view>
-                        </view>
-                        <view class="text">
-                            <image src="../..//images/addressphone.png" alt="" class="img"></image>
-                            <view class="text-info">{{item.tel}}</view>
-                        </view>
-                    </view>
-                </navigator>
+  </view>
+  <view class="showBoxS">
+    <view class="show-box">
+      <view class="show-box-li" wx:for="{{showMainBox[showMainBoxIndex]}}" wx:for-index="index" wx:key="index" wx:for-item="item" hidden="{{!(activeRole === 'all') && item.area !== activeRole}}">
+        <navigator url="../addressInfo/addressInfo?id={{item.id}}" class="flex f-main-justify">
+          <view class="img">
+            <image src="{{item.img}}" class="addressImg"></image>
+          </view>
+          <view class="info flex-item">
+            <view class="title">
+              <view class="p">{{item.title}}</view>
             </view>
-        </view>
+            <view class="text">
+              <view class="imgBox">
+                <image src="../../images/address.png" alt="" class="img"></image>
+              </view>
+              <view class="text-info">{{item.add}}</view>
+            </view>
+            <view class="text">
+              <view class="imgBox">
+                <image src="../..//images/addressphone.png" alt="" class="img"></image>
+              </view>
+              <view class="text-info">{{item.tel}}</view>
+            </view>
+          </view>
+        </navigator>
+      </view>
     </view>
+  </view>
 </view>

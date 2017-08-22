@@ -15,7 +15,7 @@
   <view class="addressInfo">
     <view class="title">{{title}}</view>
     <view class="info">
-      <view class="infoBox" bindtap="goMap" data-name="{{add}}" data-point="{{mark}}">
+      <view class="infoBox" bindtap="goMap" data-name="{{add}}" data-point="{{mark}}" data-title="{{title}}">
         <view class="icon">
           <image src="../../images/address.png" alt="" class="img"></image>
         </view>

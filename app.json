@@ -1,11 +1,10 @@
 {
   "pages": [
-    
+    "pages/address/address",
+    "pages/index/index",
     "pages/addressInfo/addressInfo",
     "pages/map/map",
-    "pages/index/index",
     "pages/baoming/baoming",
-    "pages/address/address",
     "pages/connect/index",
     "pages/searchBox/searchBox",
     "pages/classInfo/classInfo",
