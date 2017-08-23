@@ -21,7 +21,7 @@
   <view class="showBoxS">
     <view class="show-box">
       <view class="show-box-li" wx:for="{{showMainBox[showMainBoxIndex]}}" wx:for-index="index" wx:key="index" wx:for-item="item" hidden="{{!(activeRole === 'all') && item.area !== activeRole}}">
-        <navigator url="../addressInfo/addressInfo?id={{item.id}}" class="flex f-main-justify">
+        <navigator hover-class="none" url="../addressInfo/addressInfo?id={{item.id}}" class="flex f-main-justify">
           <view class="img">
             <image src="{{item.img}}" class="addressImg"></image>
           </view>
@@ -37,7 +37,7 @@
             </view>
             <view class="text">
               <view class="imgBox">
-                <image src="../..//images/addressphone.png" alt="" class="img"></image>
+                <image src="../../images/addressphone.png" alt="" class="img"></image>
               </view>
               <view class="text-info">{{item.tel}}</view>
             </view>

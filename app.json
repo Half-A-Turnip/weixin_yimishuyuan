@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/address/address",
-    "pages/index/index",
     "pages/addressInfo/addressInfo",
+    "pages/index/index",
+    "pages/address/address",
     "pages/map/map",
     "pages/baoming/baoming",
     "pages/connect/index",

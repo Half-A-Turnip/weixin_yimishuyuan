@@ -10,13 +10,13 @@ Page({
       width: 30,
       height: 30,
       callout:{
-        content:'',
-        color:'#fff',
-        fontSize:'20rpx',
+        content:'当前微信版本过低，无法使用该功能，请升级到最新微信版本后重试。',
+        color:'#ffffff',
+        fontSize:12,
         borderRadius:5,
         bgColor:'#32b16c',
-        padding:5,
-        display:'BYCLICK'
+        padding:10,
+        display:'ALWAYS'
       }
     }]
   },
@@ -38,7 +38,7 @@ Page({
     let markers = this.data.markers;
     markers[0].latitude = point[1];
     markers[0].longitude = point[0];
-    markers[0].callout.content = `${option.title}<br>${option.name}`;
+    markers[0].callout.content = `${option.title}\r\n${option.name}`;
     wx.setNavigationBarTitle({
       title: `地图-${option.title}`
     });

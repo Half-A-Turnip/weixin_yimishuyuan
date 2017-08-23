@@ -4,8 +4,8 @@
 }
 .addressbar {
     display: flex;
-    height: 80rpx;
-    line-height: 80rpx;
+    height: 40px;
+    line-height: 40px;
     position: fixed;
     width: 100%;
     z-index: 999;
@@ -16,7 +16,7 @@
     content: '';
     position: absolute;
     width: 100%;
-    height: 2rpx;
+    height: 1px;
     top: 0;
     background: rgba(0, 0, 0, 0.1);
 }
@@ -25,7 +25,7 @@
     content: '';
     position: absolute;
     width: 100%;
-    height: 2rpx;
+    height: 1px;
     bottom: 0;
     background: rgba(0, 0, 0, 0.1);
 }
@@ -34,18 +34,18 @@
     flex: 1;
     text-align: center;
     position: relative;
-    line-height:80rpx;
+    line-height:40px;
 }
 .img{
-    width: 20rpx;
-    height: 20rpx;
+    width: 10px;
+    height: 10px;
     vertical-align: middle;
 }
 .addressbar .spans:first-child::after {
     content: '';
     position: absolute;
     height: 70%;
-    width: 2rpx;
+    width: 1px;
     right: 0;
     background: rgba(0, 0, 0, 0.1);
     top: 15%;
@@ -82,40 +82,40 @@
     justify-content: space-between;
 }
 .show-box-li {
-    padding: 30rpx;
-    border-bottom: 2rpx solid #eee;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
 }
 
 .show-box-li .img {
-    height: 140rpx;
-    width: 200rpx;
-    padding-right: 30rpx;
+    height: 70px;
+    width: 100px;
+    padding-right: 15px;
 }
 
 .show-box-li .img .addressImg {
-    height: 140rpx;
-    width: 200rpx;
+    height: 70px;
+    width: 100px;
     background: transparent
 }
 
 .show-box-li .info .title {
-    margin-top: -2rpx;
-    height: 40rpx;
-    line-height: 36rpx;
+    margin-top: -1px;
+    height: 20px;
+    line-height: 18px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: 700;
-    margin-bottom: 10rpx;
+    margin-bottom: 5px;
 }
 
 .show-box-li .info .infoAll {
-    margin-top: 4rpx;
-    height: 36rpx;
-    line-height: 36rpx;
+    margin-top: 2px;
+    height: 18px;
+    line-height: 18px;
     color: #b9b2b2;
-    font-size: 22rpx;
+    font-size: 11px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -123,33 +123,33 @@
 }
 .p{
    color:#484848;
-    font-size:28rpx;
-    line-height:40rpx;
+    font-size:14px;
+    line-height:20px;
     font-weight:700;
 }
 .text {
     display: flex;
     color: #888;
-    margin-bottom: 6rpx;
+    margin-bottom: 3px;
 }
 .text .imgBox{
-    width: 26rpx;
-    height: 26rpx;
+    width: 13px;
+    height: 13px;
     padding-right: 5px;
 }
 .text .imgBox .img {
-    width: 26rpx;
-    height: 26rpx;
-    padding-right: 10rpx;
+    width: 13px;
+    height: 13px;
+    padding-right: 5px;
     vertical-align:baseline;
 }
 
 .text .text-info {
-    line-height: 46rpx;
-    font-size:26rpx;
+    line-height: 23px;
+    font-size:13px;
 }
 .showBoxS{
-    margin-top: 100rpx;
+    margin-top: 50px;
 }
 
 /*下拉*/
@@ -157,7 +157,7 @@
     width: 100%;
     height: 100%;
     position: fixed;
-    top: 80rpx;
+    top: 40px;
     left: 0;
     z-index: 999;
 }
@@ -178,7 +178,7 @@
     z-index: 99;
     width: 100%;
     box-sizing: border-box;
-    padding: 20rpx;
+    padding: 10px;
     background: #fff;
 }
 
@@ -192,9 +192,9 @@
 .shows .span {
     flex: 0 0 25%;
     flex-direction: column;
-    padding: 10rpx 0;
+    padding: 5px 0;
     box-sizing: border-box;
-    border: 2rpx solid transparent;
+    border: 1px solid transparent;
 }
 
 .shows .span.active {
